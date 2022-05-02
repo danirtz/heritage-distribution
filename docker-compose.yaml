@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  php:
+    container_name: $CONTAINER_NAME
+    build:
+      context: .
+      args:
+        UID: $USER_ID
+      dockerfile: docker/php/Dockerfile
+    volumes:
+      - .:/var/www/symfony
+    environment:
+      PHP_IDE_CONFIG: serverName=$CONTAINER_NAME
+    ports:
+      - '8000:8000'
+      - '9003:9003'
+
