@@ -1,5 +1,5 @@
-INSTRUCTIONS
 - Execute "make start" to start the Docker server.
 - Execute "make bash" to get into the server's bash.
+- Execute "composer update" to download vendor.
 - Execute "php bin/phpunit" to run unit tests.
 - Execute "make stop" to stop the Docker server.
